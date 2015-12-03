@@ -216,19 +216,19 @@ public abstract class DcaseNodeEditPart extends ShapeNodeEditPart implements
      * @param event the event.
      */
     protected void handleNotificationEvent(Notification event) {
-    	Object feature = event.getFeature();
-    	if(event.getEventType() == Notification.SET) {
-    		if(feature instanceof EAttribute) {
-    	    	// process parameters
-    			EAttribute attr = (EAttribute)feature;
-    			if(attr.getName().equals("parameterVals") || //$NON-NLS-1$
-    					attr.getName().equals("subType")) { //$NON-NLS-1$
-    				this.notifyParameters();
-            	}
-            	// change background
-            	refreshAttributeColor();
-    		}
-    	}
+//    	Object feature = event.getFeature();
+//    	if(event.getEventType() == Notification.SET) {
+//    		if(feature instanceof EAttribute) {
+//    	    	// process parameters
+//    			EAttribute attr = (EAttribute)feature;
+//    			if(attr.getName().equals("parameterVals") || //$NON-NLS-1$
+//    					attr.getName().equals("subType")) { //$NON-NLS-1$
+//    				this.notifyParameters();
+//            	}
+//            	// change background
+//            	refreshAttributeColor();
+//    		}
+//    	}
     	
     	super.handleNotificationEvent(event);
     }
